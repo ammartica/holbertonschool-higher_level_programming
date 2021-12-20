@@ -1,1 +1,2 @@
-# holbertonschool-higher_level_programming
+This repository will contain multiple repositories
+with projects from my second trimester in Holberton School.
