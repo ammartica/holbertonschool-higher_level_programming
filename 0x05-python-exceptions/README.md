@@ -9,3 +9,4 @@ in Python programming and how to correctly handle each of them.
   3. Write a function that divides 2 integers and prints the result.
   4. Write a function that divides element by element 2 lists.
   5. Write a function that raises a type exception.
+  6. Write a function that raises a name exception with a message.
