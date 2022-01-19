@@ -5,14 +5,14 @@
 class Square:
     """Defines a square"""
 
-
     def __init__(self, size):
         """Method that initializes square
 
         Args:
             size (int): size of a square
 
-        Returns: Nothing
+        Returns:
+            Nothing
         """
 
         self.__size = size
