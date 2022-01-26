@@ -1,0 +1,46 @@
+"""
+Function that adds 2 integers
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+DESIRED INPUT
+
+Add 2 positive numbers
+>>> add_integer(1, 2)
+3
+
+Add a positive number and a negative number
+>>> add_integer(100, -2)
+98
+
+Add number to standard value of second argument of add_integer()
+>>> add_integer(2)
+100
+
+Add float and negative int number
+>>> add_integer(100.3, -2)
+98
+
+Add 0 to number
+>>> add_integer(34, 0)
+34
+
+
+UNDESIRED INPUT
+
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("School", 9)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+"""
