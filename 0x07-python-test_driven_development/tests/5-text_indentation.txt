@@ -1,0 +1,29 @@
+Import function from module:
+  >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+DESIRED INPUTS
+
+Test 1: given lines with . ? :
+  >>> text = "Lorem ipsum dolor sit amet? consectetur: adipiscing elit."
+  >>> text_indentation(text)
+  Lorem ipsum dolor sit amet?
+  <BLANKLINE>
+  consectetur:
+  <BLANKLINE>
+  adipiscing elit.
+  <BLANKLINE>
+
+UNDESIRED INPUTS:
+
+Test 2: text is not a string
+  >>> text_indentation(4)
+  Traceback (most recent call last):
+  ...
+  TypeError: text must be a string
+
+Test 3: sent too many arguments
+  >>> text = "Lorem ipsum dolor sit amet? consectetur: adipiscing elit."
+  >>> text_indentation(text, "hey girl heeeeeeeyyyyy")
+  Traceback (most recent call last):
+  ...
+  TypeError: text_indentation() takes 1 positional argument but 2 were given
