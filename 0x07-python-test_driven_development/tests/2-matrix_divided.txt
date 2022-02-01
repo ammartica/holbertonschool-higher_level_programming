@@ -1,0 +1,70 @@
+Import function from module:
+  >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+DESIRED INPUTS
+
+Test 1: Divides int and int
+  >>> matrix = [[1, 2, 3], [4, 5, 6]]
+  >>> matrix_divided(matrix, 3)
+  [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+  >>> matrix
+  [[1, 2, 3], [4, 5, 6]]
+
+Test 2: Divides int and float
+  >>> matrix = [[1, 2.5, 3], [4, 5, 6.3]]
+  >>> matrix_divided(matrix, 3)
+  [[0.33, 0.83, 1.0], [1.33, 1.67, 2.1]]
+  >>> matrix
+  [[1, 2.5, 3], [4, 5, 6.3]]
+
+Test 3: Divides int and float by negative number
+  >>> matrix = [[1, 2.5, 3], [4, 5, 6.3]]
+  >>> matrix_divided(matrix, -3)
+  [[-0.33, -0.83, -1.0], [-1.33, -1.67, -2.1]]
+  >>> matrix
+  [[1, 2.5, 3], [4, 5, 6.3]]
+
+Test 4: Matrix has negative numbers
+  >>> matrix = [[1, -2.5, 3], [4, -5, 6.3]]
+  >>> matrix_divided(matrix, 3)
+  [[0.33, -0.83, 1.0], [1.33, -1.67, 2.1]]
+  >>> matrix
+  [[1, -2.5, 3], [4, -5, 6.3]]
+
+UNDESIRED OUTPUTS
+
+Test 5: Matrix is None
+  >>> matrix_divided(None, 3)
+  Traceback (most recent call last):
+  ...
+  TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 6: Div is None
+  >>> matrix = [[1, 2, 3], [4, 5, 6]]
+  >>> matrix_divided(matrix, None)
+  Traceback (most recent call last):
+  ...
+  TypeError: div must be a number
+
+Test 7: Div is 0
+  >>> matrix = [[1, 2, 3], [4, 5, 6]]
+  >>> matrix_divided(matrix, 0)
+  Traceback (most recent call last):
+  ...
+  ZeroDivisionError: division by zero
+
+
+Test 8: Matrix has elements other than ints or floats
+  >>> matrix = [[1, 2, "3"], [4, 5.2, True]]
+  >>> matrix_divided(matrix, 3)
+  Traceback (most recent call last):
+  ...
+  TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 9: Lists in matrix are unequal size
+  >>> matrix = [[1, 2, 3], [4, 5.2, 6.3, 7]]
+  >>> matrix_divided(matrix, 3)
+  Traceback (most recent call last):
+  ...
+  TypeError: Each row of the matrix must have the same size
