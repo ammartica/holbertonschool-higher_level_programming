@@ -1,0 +1,46 @@
+Import function from module:
+  >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+DESIRED INPUTS
+
+Test 1: Prints two strings
+  >>> say_my_name("Wanda", "Maximoff")
+  My name is Wanda Maximoff
+
+Test 2: Only 1 argument
+  >>> say_my_name("Wanda")
+  My name is Wanda 
+
+
+UNDESIRED INPUTS
+
+Test 3: first_name is None
+  >>> say_my_name(None, "Maximoff")
+  Traceback (most recent call last):
+  ...
+  TypeError: first_name must be a string
+
+Test 4: first_name is not string
+  >>> say_my_name(4, "Maximoff")
+  Traceback (most recent call last):
+  ...
+  TypeError: first_name must be a string
+
+Test 5: last_name is None
+  >>> say_my_name("Wanda", None)
+  Traceback (most recent call last):
+  ...
+  TypeError: last_name must be a string
+
+Test 6: last_name is not string
+  >>> say_my_name("Wanda", 5)
+  Traceback (most recent call last):
+  ...
+  TypeError: last_name must be a string
+
+Test 7: given 3 arguments
+  >>> say_my_name("Wanda", "and","Vision")
+  Traceback (most recent call last):
+  ...
+  TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
