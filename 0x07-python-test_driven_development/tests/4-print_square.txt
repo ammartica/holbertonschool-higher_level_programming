@@ -1,0 +1,32 @@
+Import function from module:
+  >>> print_square = __import__('4-print_square').print_square
+
+
+DESIRED INPUTS
+
+Test 1: size is int
+  >>> print_square(4)
+  ####
+  ####
+  ####
+  ####
+
+UNDESIRED INPUTS
+
+Test 2: size is not int
+  >>> print_square("hey")
+  Traceback (most recent call last):
+  ...
+  TypeError: size must be an integer
+
+Test 3: size is less than 0
+  >>> print_square(-7)
+  Traceback (most recent call last):
+  ...
+  ValueError: size must be >= 0
+
+Test 4: Given more than 1 argument
+  >>> print_square(4, 5)
+  Traceback (most recent call last):
+  ...
+  TypeError: print_square() takes 1 positional argument but 2 were given
