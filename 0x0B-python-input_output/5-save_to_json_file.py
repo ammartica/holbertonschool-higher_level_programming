@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Contains the save_to_json_file function
