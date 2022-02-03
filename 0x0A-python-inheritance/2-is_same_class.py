@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Contains function is_same_class"""
+"""
+Contains function is_same_class
+"""
 
 
 def is_same_class(obj, a_class):
