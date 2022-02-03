@@ -8,26 +8,40 @@ Test 1: MyList inherits from list
   >>> issubclass(MyList, list)
   True
 
-Test 2: Check appending works and print sorted with sorted append:
+Test 2: Check empty list
+  >>> l = MyList()
+  >>> l.print_sorted()
+  []
+
+Test 3: Check appending works
   >>> l.append(1)
   >>> l.append(2)
   >>> print(l)
   [1, 2]
 
-Test 3: check print sorted with not sorted append
-  >>> l.append(2)
-  >>> l.append(1)
+Test 3: Check list appended in order is correctly sorted
   >>> l.print_sorted()
   [1, 2]
 
-Test 4: check sorted with not sorted append and negative number
-  >>> l.append(2)
-  >>> l.append(-9)
-  >>> l.append(1)
-  >>> l.print_sorted()
-  [-9, 1, 2]
-
-Test 5: check print_sorted() with empty list
+Test 4: check print_sorted() sorts reversely appended list
   >>> l = MyList()
+  >>> l.append(4)
+  >>> l.append(3)
+  >>> l.append(1)
+  >>> print(l)
+  [4, 3, 1]
   >>> l.print_sorted()
-  []
+  [1, 3, 4]
+
+Test 5: check print_sorted() works with negatives
+  >>> l.append(-1)
+  >>> print(l)
+  [4, 3, 1, -1]
+  >>> l.print_sorted()
+  [-1, 1, 3, 4]
+
+Test 6: check too many arguments
+  >>> l.print_sorted(1)
+  Traceback (most recent call last):
+  ...
+  TypeError: print_sorted() takes 1 positional argument but 2 were given
