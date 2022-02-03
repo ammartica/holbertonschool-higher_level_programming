@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Contains class named MyList"""
+"""
+Contains class named MyList
+"""
 
 
 class MyList(list):
