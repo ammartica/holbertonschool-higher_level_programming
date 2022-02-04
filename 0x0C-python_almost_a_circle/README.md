@@ -19,3 +19,6 @@ This repository contains tasks that explore serialization, deserialization, JSON
   * Update the class Rectangle by adding the public method def to\_dictionary(self): that returns the dictionary representation of a Rectangle
   * Update the class Square by adding the public method def to\_dictionary(self): that returns the dictionary representation of a Square
   * Update the class Base by adding the static method def to\_json\_string(list\_dictionaries): that returns the JSON string representation of list\_dictionaries
+  * Update the class Base by adding the class method def save\_to\_file(cls, list\_objs): that writes the JSON string representation of list\_objs to a file
+  * Update the class Base by adding the static method def from\_json\_string(json\_string): that returns the list of the JSON string representation json\_string
+  * Update the class Base by adding the class method def load\_from\_file(cls): that returns a list of instances
