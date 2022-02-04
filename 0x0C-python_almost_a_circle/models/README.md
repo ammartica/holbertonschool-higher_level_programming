@@ -1,1 +1,1 @@
-This folder will contain models for the Almost a Circle project.
+This folder is a Python package for the Almost a Circle project.
