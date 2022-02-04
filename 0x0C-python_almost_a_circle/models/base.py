@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Contains class named Base"""
+"""Contains a class named Base"""
 
 
 class Base:
