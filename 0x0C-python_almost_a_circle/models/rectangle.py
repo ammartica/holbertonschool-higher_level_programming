@@ -74,3 +74,15 @@ class Rectangle(Base):
     def area(self):
         """returns area value of Rectangle instance"""
         return self.__width * self.__height
+
+    def display(self):
+        """prints Rectangle instance with the # char"""
+        string = ""
+        if self.width == 0 or self.height == 0:
+            return string
+        for i in range(self.height):
+            for j in range(self.width):
+                string += "#"
+            if i != self.height - 1:
+                string += "\n"
+        print(string)
