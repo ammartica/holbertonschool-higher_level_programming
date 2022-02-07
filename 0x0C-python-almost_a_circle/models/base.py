@@ -32,4 +32,3 @@ class Base:
         file_name = cls.__name__ + ".jason"
         with open(file_name, "w") as f:
             f.write(cls.to_json_string(list_objs))
-
