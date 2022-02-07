@@ -22,11 +22,11 @@ class Base:
         if list_dictionaries is None:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
-
+"""
     @classmethod
     def save_to_file(cls, list_objs):
         """writes JSON string of list_objs to a file"""
         if list_objs is None:
             ls = []
         file_name = cls.__name__ + ".jason"
-        with open(file_name, "w", encoding="utf-8") as f:
+        with open(file_name, "w", encoding="utf-8") as f:"""
