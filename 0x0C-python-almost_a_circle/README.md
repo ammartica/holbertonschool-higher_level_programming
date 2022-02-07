@@ -1,4 +1,4 @@
-Project 0x0C. Python - Almost a circle
+Project: 0x0C. Python - Almost a circle
 
 This repository contains tasks that explore serialization, deserialization, JSON files,
 \*args and \*kwargs in Python.
