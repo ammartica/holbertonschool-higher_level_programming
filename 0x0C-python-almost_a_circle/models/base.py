@@ -40,3 +40,10 @@ class Base:
             else:
                 f.write(cls.to_json_string([i.to_dictionary()
                                             for i in list_objs]))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns instance with attributes already set"""
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
