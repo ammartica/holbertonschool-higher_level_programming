@@ -59,7 +59,7 @@ class Base:
         try:
             with open(file_name, "r", encoding="utf-8") as f:
                 ls2 = cls.from_json_string(f.read())
-                 for i in ls2:
+                for i in ls2:
                     ls.append(cls.create(**i))
         except:
             pass
