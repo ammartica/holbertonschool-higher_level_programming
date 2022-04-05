@@ -2,5 +2,10 @@
 // Returns reversed version of a list
 
 exports.esrever = function (list) {
-  return list.sort(function (a, b) { return b - a; });
+  const revList = [];
+
+  for (let i = list.length - 1; i >= 0; i--) {
+    revList.push(list[i]);
+  }
+  return revList;
 };
