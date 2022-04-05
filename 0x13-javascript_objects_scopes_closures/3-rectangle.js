@@ -1,0 +1,26 @@
+#!/usr/bin/node
+// Class Rectangle creates rectangle and has instance method print()
+
+class Rectangle {
+  constructor (w, h) {
+    if (w && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
+  }
+
+  // Class method print() prints a rectangle using character X
+  print () {
+    let stringRect = '';
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
+        stringRect += 'X';
+      }
+      if (i !== this.height - 1) {
+        stringRect += '\n';
+      }
+    }
+    console.log(stringRect);
+  }
+}
+module.exports = Rectangle;
