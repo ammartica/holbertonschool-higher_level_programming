@@ -10,11 +10,11 @@ class Rectangle {
   }
 
   // Instance method print() prints a rectangle using character X
-  print () {
+  print (chara = 'X') {
     let stringRect = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
-        stringRect += 'X';
+        stringRect += chara;
       }
       if (i !== this.height - 1) {
         stringRect += '\n';
