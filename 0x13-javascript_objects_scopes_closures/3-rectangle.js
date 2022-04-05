@@ -9,7 +9,7 @@ class Rectangle {
     }
   }
 
-  // Class method print() prints a rectangle using character X
+  // Instance method print() prints a rectangle using character X
   print () {
     let stringRect = '';
     for (let i = 0; i < this.height; i++) {
