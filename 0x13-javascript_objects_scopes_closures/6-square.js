@@ -1,17 +1,22 @@
 #!/usr/bin/node
 // Child Class Square with instance method charPrint(c)
 
-const fSquare = require('./5-square.js');
+const Rectangle = require('./5-square');
 
-class Square extends fSquare {
+module.exports = class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
 
-  // Instance method prints rectangle using the character c
   charPrint (c = 'X') {
-    super.print(c);
-  }
-}
+    let str = '';
 
-module.exports = Square;
+    for (let index = 0; index < this.height; index++) {
+      str += c;
+    }
+
+    for (let index = 0; index < this.height; index++) {
+      console.log(str);
+    }
+  }
+};
