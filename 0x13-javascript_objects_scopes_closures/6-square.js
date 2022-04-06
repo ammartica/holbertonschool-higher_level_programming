@@ -9,7 +9,7 @@ class Square extends fSquare {
   }
 
   // Instance method prints rectangle using the character c
-  charPrint (c) {
+  charPrint (c = 'X') {
     super.print(c);
   }
 }
