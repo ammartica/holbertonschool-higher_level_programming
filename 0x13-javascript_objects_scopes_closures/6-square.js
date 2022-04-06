@@ -4,6 +4,10 @@
 const fSquare = require('./5-square.js');
 
 class Square extends fSquare {
+  constructor (size) {
+    super(size, size);
+  }
+
   // Instance method prints rectangle using the character c
   charPrint (c) {
     super.print(c);
