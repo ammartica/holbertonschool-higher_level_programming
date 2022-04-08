@@ -14,18 +14,16 @@ if __name__ == "__main__":
 
     """Execute the MySQL query"""
     cur.execute("SELECT * FROM states \
-                 WHERE name = %(name)s \
-                 ORDER BY id ASC \
-                 ", { "name": argv[4] })
+                 WHERE name = %s \
+                 ORDER BY id ASC", \
+                 (argv[4], ))
 
     """Used after SELECT statement to obtain results"""
     rows = cur.fetchall()
 
-    """If statement checks that name exists"""
-    if rows is not None:
-        """For loop to display results"""
-        for row in rows:
-            print(row)
+    """For loop to display results"""
+    for row in rows:
+        print(row)
 
     """Clean up process"""
     cur.close()
