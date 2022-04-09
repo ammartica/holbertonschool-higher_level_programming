@@ -12,9 +12,10 @@ if __name__ == "__main__":
     """Cursor object lets us execute sql queries"""
     cur = db.cursor()
 
-    """Execute the MySQL querie"""
+    """Execute the MySQL query"""
     cur.execute("SELECT * FROM states \
-                 WHERE name='{}'".format(argv[4]))
+                 WHERE name='{}' \
+                 ORDER BY id ASC".format(argv[4]))
 
     """Used after SELECT statement to obtain results"""
     rows = cur.fetchall()
