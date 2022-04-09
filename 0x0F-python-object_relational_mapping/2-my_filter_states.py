@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     """Execute the MySQL query"""
     cur.execute("SELECT * FROM states \
-                 WHERE name='{}' \
+                 WHERE name LIKE BINARY '{}' \
                  ORDER BY states.id ASC".format(argv[4]))
 
     """Used after SELECT statement to obtain results"""
