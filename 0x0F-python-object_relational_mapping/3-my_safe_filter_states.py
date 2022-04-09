@@ -15,8 +15,8 @@ if __name__ == "__main__":
     """Execute the MySQL query"""
     cur.execute("SELECT * FROM states \
                  WHERE name = %s \
-                 ORDER BY id ASC", \
-                 (argv[4], ))
+                 ORDER BY id ASC",
+                (argv[4], ))
 
     """Used after SELECT statement to obtain results"""
     rows = cur.fetchall()
